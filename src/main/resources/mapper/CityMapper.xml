@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yida.demo.mapper.CityMapper">
+
+    <select id="get" resultType="com.yida.demo.entity.City">
+
+        SELECT id,name,countryCode,district,population from City where id = #{id}
+
+    </select>
+
+    <select id="findByPage" resultType="com.yida.demo.entity.City">
+        SELECT id,name,countryCode,district,population from City
+    </select>
+</mapper>
